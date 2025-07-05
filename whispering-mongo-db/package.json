@@ -1,0 +1,43 @@
+{
+  "name": "whispering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": [
+      "public/*.js"
+    ]
+  },
+  "scripts": {
+    "deps:check": "npx npm-check-updates",
+    "deps:upgrade": "npx npm-check-updates -u && npm install",
+    "start": "node --env-file=.env index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "docker:start": "podman machine start",
+    "docker:stop": "podman machine stop",
+    "db:up": "podman compose up -d --build",
+    "db:down": "podman compose down --remove-orphans"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
+    "dotenv": "^17.0.1",
+    "jest": "^30.0.4",
+    "standard": "^17.1.2",
+    "supertest": "^7.1.1"
+  }
+}

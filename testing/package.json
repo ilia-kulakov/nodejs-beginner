@@ -1,0 +1,19 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "node-test": "node --test ./test/node-test/*",
+    "jest-test": "jest",
+    "node-test:coverage": "node --test --experimental-test-coverage ./test/node-test/*",
+    "jest-test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
+    "jest": "^30.0.3"
+  }
+}
