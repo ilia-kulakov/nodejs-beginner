@@ -11,7 +11,7 @@ import {
   closeDbConnection,
 } from './utils.js';
 
-dotenv.config();
+dotenv.config({ path: '.test.env' });
 
 let whispers;
 let inventedId;

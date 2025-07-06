@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1751742098669" clover="3.2.0">
-  <project timestamp="1751742098669" name="All files">
+<coverage generated="1751786496516" clover="3.2.0">
+  <project timestamp="1751786496516" name="All files">
     <metrics statements="275" coveredstatements="272" conditionals="173" coveredconditionals="166" methods="40" coveredmethods="40" elements="488" coveredelements="478" complexity="0" loc="275" ncloc="275" packages="2" files="5" classes="5"/>
     <package name="whispering-mongo-db">
       <metrics statements="235" coveredstatements="232" conditionals="140" coveredconditionals="133" methods="30" coveredmethods="30"/>

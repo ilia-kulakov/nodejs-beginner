@@ -18,13 +18,15 @@
     "deps:check": "npx npm-check-updates",
     "deps:upgrade": "npx npm-check-updates -u && npm install",
     "start": "node --env-file=.env index.js",
+    "pretest": "podman compose up -d test-db",
     "test": "jest",
-    "test:coverage": "jest --coverage",
+    "posttest": "podman compose stop test-db && podman compose rm -f test-db",
+    "test:coverage": "npm run pretest && jest --coverage && npm run posttest",
     "lint": "standard",
     "lint:fix": "standard --fix",
     "docker:start": "podman machine start",
     "docker:stop": "podman machine stop",
-    "db:up": "podman compose up -d --build",
+    "db:up": "podman compose up -d db",
     "db:down": "podman compose down --remove-orphans"
   },
   "dependencies": {
