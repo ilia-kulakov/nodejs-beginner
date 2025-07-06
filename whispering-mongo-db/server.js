@@ -114,4 +114,16 @@ app.delete('/api/v1/whisper/:id', requireAuthentication, async (req, res) => {
   res.sendStatus(200);
 });
 
+app.use((err, req, res, next) => {
+  console.error('Middle Error Handler');
+  console.error(err.stack);
+  next(err);
+});
+
+app.use((err, req, res, next) => {
+  console.error('Final Error Handler');
+  console.error(err.stack);
+  res.status(500).send('Ohh! Server needs love. ' + err);
+});
+
 export { app };
